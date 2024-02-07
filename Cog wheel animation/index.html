@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>COG WHEEL ANIMATION</h1>
+    <br /><br />
+    <div id="container">
+      <img id="wheel" class="clockwise" src="wheel1.gif" alt="wheel" />
+      <img id="wheel1" class="anticlockwise" src="wheel2.gif" alt="wheek" />
+
+      <img id="wheel3" class="clockwise" src="wheel1.gif" alt="wheel" />
+
+      <!-- Add some buttons to control the animation-->
+      <div id="btnContainer">
+        <button id="btnStart" class="btn">Start Animation</button>
+        <button id="btnStop" class="btn">Stop Animation</button>
+        <button id="btnFast" class="btn">Fast Speed</button>
+        <button id="btnNormal" class="btn">Normal Speed</button>
+        <button id="btnSlow" class="btn">Slow Speed</button>
+      </div>
+    </div>
+
+    <script>
+      //make the 3 cog wheels readable by javascript
+      const wheel = document.getElementById("wheel");
+      const wheel1 = document.getElementById("wheel1");
+      const wheel3 = document.getElementById("wheel3");
+      //have the animation paused initially
+      wheel.style.animationPlayState = "paused";
+      wheel1.style.animationPlayState = "paused";
+      wheel3.style.animationPlayState = "paused";
+      //make the buttons readable by javascript
+      const btnStop = document.getElementById("btnStop");
+      const btnStart = document.getElementById("btnStart");
+      const btnFast = document.getElementById("btnFast");
+      const btnNormal = document.getElementById("btnNormal");
+
+      const btnSlow = document.getElementById("btnSlow");
+      //function to stop the animation
+      const stop = () => {
+        console.log("CLICKED STOP BUTTON");
+        wheel.style.animationPlayState = "paused";
+        wheel1.style.animationPlayState = "paused";
+        wheel3.style.animationPlayState = "paused";
+      };
+      btnStop.addEventListener("click", stop);
+      //
+      //function to start the animation
+      const start = () => {
+        console.log("CLICKED START BUTTON");
+        wheel.style.animationPlayState = "running";
+        wheel1.style.animationPlayState = "running";
+        wheel3.style.animationPlayState = "running";
+      };
+      btnStart.addEventListener("click", start);
+      //
+      //function to make it go fast
+      const fast = () => {
+        console.log("CLICKED FAST BUTTON");
+        wheel.style.animationDuration = "2s";
+        wheel1.style.animationDuration = "2s";
+        wheel3.style.animationDuration = "2s";
+      };
+      btnFast.addEventListener("click", fast);
+      //
+      //function to make it go normal speed
+      const normal = () => {
+        console.log("CLICKED NORMAL BUTTON");
+        wheel.style.animationDuration = "5s";
+        wheel1.style.animationDuration = "5s";
+        wheel3.style.animationDuration = "5s";
+      };
+      btnNormal.addEventListener("click", normal);
+      //
+      //function to make it go slow
+      const slow = () => {
+        console.log("CLICKED SLOW BUTTON");
+        wheel.style.animationDuration = "10s";
+        wheel1.style.animationDuration = "10s";
+        wheel3.style.animationDuration = "10s";
+      };
+      btnSlow.addEventListener("click", slow);
+    </script>
+  </body>
+</html>

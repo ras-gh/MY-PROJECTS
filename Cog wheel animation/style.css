@@ -1,0 +1,113 @@
+body {
+position:absolute;
+padding:0;
+margin:0;
+overflow:none;
+
+}
+h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-left: 20px;
+    margin:auto;
+    text-decoration: underline;
+    
+
+
+}
+#container {
+    align-content: center;
+    padding:0px;
+    width:90%;
+    height:vh;
+    
+    position:absolute;
+    top:100px;
+    left:6px;
+    
+   
+}
+#btnStart {
+    position:absolute;
+    top:400px;
+    font-size: 20px;
+    width:200px;
+}
+
+
+#btnStop {
+    position:absolute;
+    top:400px;
+    left:200px;
+    font-size: 20px;
+    width:200px;
+}
+#btnFast {
+    position:absolute;
+    top:440px;
+    left:270px;
+    font-size:20px;
+    width:130px;
+}
+#btnNormal {
+    position:absolute;
+    top:440px;
+    left:130px;
+    font-size:20px;
+    width:140px;
+}
+
+#btnSlow {
+    position:absolute;
+    top:440px;
+    
+    font-size:20px;
+    width:130px;
+}
+
+
+
+#wheel {
+    position:absolute;
+    left:12px;
+    width:130px;
+}
+
+
+#wheel1 {
+    position:absolute;
+    top:84px;
+    left:98px;
+    width:130px;
+   
+}
+#wheel3 {
+    position:absolute;
+    top:66px;
+    left:220px;
+    width:130px;
+   
+}
+.clockwise {
+    animation-name: rotator;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 100;
+   
+}
+.anticlockwise {
+    animation-name: rotator;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+   animation-direction:reverse;
+   animation-iteration-count: 100;
+}
+
+
+@keyframes rotator {
+    100% { transform:rotate(360deg)};
+    0% {transform:rotate(0deg)};
+    
+}
+
+
+
